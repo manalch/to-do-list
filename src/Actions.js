@@ -1,5 +1,17 @@
-export const updateItemStatus = status => {
+export const updateItemStatus = (id) => {
     return {
-        type: "UPDATE_ITEM_STATUS", payload: status
-    }
+        type: "UPDATE_STATUS", payload: id
+    };
+}
+
+export const addToDoItem = (toDo) => {
+    return {
+        type: "ADD_TODO", payload: toDo
+    };
+}
+
+export const deleteToDoItem = (id) => {
+    return {
+        type: "DELETE_TODO", payload: id
+    };
 }
