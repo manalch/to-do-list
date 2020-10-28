@@ -8,18 +8,19 @@ class ToDoGenerator extends Component {
         const id = uuidv4();
         const text = event.target.toDoInput.value;
         const toDo = { id, text, status: false };
-        console.log(this.props);
         this.props.addToDoItem(toDo);
+        event.target.toDoInput.value = "";
     }
 
     render() {
         return (
             <div>
                 <form onSubmit={this.onAddToDoItem}>
-                    <section>
+                    <div>
+                        <h3>Add to do list</h3>
                         <input type="text" name="toDoInput" id="toDoInput" />
                         <input type="submit" value="Add" id="toDoSubmit" />
-                    </section>
+                    </div>
                 </form>
             </div>
         );

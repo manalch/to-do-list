@@ -7,9 +7,9 @@ class ToDoGroup extends Component {
             <ToDoItemContainer key={toDo.id} toDo={toDo} />
         ));
         return (
-            <div>
+            <section>
                 {toDos}
-            </div>
+            </section>
         );
     }
 }
